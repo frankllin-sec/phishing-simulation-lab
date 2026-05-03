@@ -46,8 +46,8 @@ Once running, the admin panel is accessible at:
 https://127.0.0.1:3333
 ```
 
-> <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/4ee0f81642b3cba1e69df81ab8dfc4b8bd4e6624/Installed-pt-1.png">
-  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/4ee0f81642b3cba1e69df81ab8dfc4b8bd4e6624/Installed-pt-1.png"/>
+<a href="https://github.com/frankllin-sec/phishing-simulation-lab/blob/main/images/Installed-pt-1.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/images/Installed-pt-1.png" width="300"/>
 </a>
 
 ---
