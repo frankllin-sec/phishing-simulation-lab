@@ -22,7 +22,7 @@
 ## 📌 About This Project
 
 This project demonstrates a complete **phishing simulation lifecycle** using **GoPhish** inside a Kali Linux VM.  
-The goal is to simulate how attackers craft phishing emails and credential harvesting pages — and how SOC Analysts detect, measure, and respond to these threats.
+The goal is to simulate how attackers craft phishing emails and credential harvesting pages.
 
 The simulation covers:
 - Setting up a phishing infrastructure from scratch
@@ -32,37 +32,6 @@ The simulation covers:
 - Understanding how to build a security awareness response
 
 ---
-
-## 🗺️ Project Structure
-
-```
-phishing-simulation-lab/
-│
-├── README.md
-├── phase-1-setup/
-│   └── gophish-installation.md
-├── phase-2-sending-profile/
-│   └── smtp-configuration.md
-├── phase-3-email-template/
-│   └── email-template.md
-├── phase-4-landing-page/
-│   └── landing-page.md
-├── phase-5-users-groups/
-│   └── target-group.md
-├── phase-6-campaign-setup/
-│   └── campaign-configuration.md
-├── phase-7-campaign-launch/
-│   └── campaign-launch.md
-├── phase-8-troubleshooting/
-│   └── port-configuration-fix.md
-├── phase-9-results/
-│   └── results-analysis.md
-└── phase-10-awareness/
-    └── awareness-response.md
-```
-
----
-
 ## 📋 Step-by-Step Walkthrough
 
 ---
