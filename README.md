@@ -251,13 +251,11 @@ AI was used to:
 *"Using AI to accelerate learning is a skill in itself  just like a SOC Analyst 
 uses tools to work smarter."*
 
-## 🔗 Related Projects
-
-| Project | Description |
-|---|---|
-| [IP Investigation Lab](https://github.com/frankllin-sec) | OSINT investigation of a suspicious IP using VirusTotal, AbuseIPDB, and WHOIS |
-| [Home Lab SIEM](https://github.com/frankllin-sec) | Splunk SIEM setup with Windows + Kali Linux VMs |
-| [Cybersecurity Journey](https://github.com/frankllin-sec) | Full SOC Analyst learning path and progress tracker |
+## <p align="center">
+  <a href="https://github.com/frankllin-sec/My-Projects/blob/main/README.md">
+    <img src="https://img.shields.io/badge/🗂️%20View%20My%20Projects-Click%20Here-7c3aed?style=for-the-badge"/>
+  </a>
+</p>
 
 ---
 
