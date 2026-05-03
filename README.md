@@ -4,8 +4,6 @@
   <img src="https://img.shields.io/badge/Tool-GoPhish-orange?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Platform-Kali%20Linux-blue?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Type-Phishing%20Simulation-red?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Role-SOC%20Analyst-purple?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Status-Completed-green?style=for-the-badge"/>
 </p>
 
 ---
