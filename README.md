@@ -46,7 +46,8 @@ Once running, the admin panel is accessible at:
 https://127.0.0.1:3333
 ```
 
-<a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Installed-pt-1.png">
+
+📸<a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Installed-pt-1.png">
   <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Installed-pt-1.png" width="400"/>
 </a>
 
@@ -66,7 +67,9 @@ A dedicated **App Password** was generated from Google Account settings — this
 | Password | [App Password - 16 chars] |
 | Ignore Certificate Errors | ✅ Enabled |
 
-> 📸 *[Screenshot: Sending Profile configured in GoPhish]*
+> 📸 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Sending%20Profile.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Sending%20Profile.png" width="300"/>
+</a>
 
 ---
 
