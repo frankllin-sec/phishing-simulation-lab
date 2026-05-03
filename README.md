@@ -47,9 +47,9 @@ https://127.0.0.1:3333
 ```
 
 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Installed-pt-1.png">
-  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Installed-pt-1.png" width="300"/>
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Installed-pt-1.png" width="400"/>
 </a>
----
+
 
 ### ✅ Phase 2 — Sending Profile (SMTP Configuration)
 
