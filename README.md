@@ -86,12 +86,10 @@ The email uses HTML formatting with a blue header, clear call-to-action button, 
 ```
 [Action Required] Unusual sign-in activity detected
 ```
-
-> 📸 *[Screenshot: Email Template configured in GoPhish]*  
-> 📸 *[Screenshot: Email received in Gmail inbox]*
-
+> 📸 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Template%20configured.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Template%20configured.png" width="300"/>
+</a>
 ---
-
 ### ✅ Phase 4 — Landing Page (Fake Google Login)
 
 Created a fake Google login page using custom HTML/CSS.  
@@ -102,10 +100,10 @@ The page visually mimics the real Google sign-in page with the colored Google lo
 - ✅ Capture Passwords
 - 🔁 Redirect to: `https://google.com` (after form submission)
 
-> 📸 *[Screenshot: Fake Google login page rendered in browser]*
-
+> 📸 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/landing-page-working-100%25.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/landing-page-working-100%25.png" width="300"/>
+</a>
 ---
-
 ### ✅ Phase 5 — Users & Groups (Target Configuration)
 
 Created a test target group to simulate a real employee list.  
@@ -115,17 +113,17 @@ In a real authorized engagement, this would contain actual employee emails provi
 |---|---|---|---|
 | John | Smith | [test-email]@gmail.com | Employee |
 
-> 📸 *[Screenshot: Users & Groups configured in GoPhish]*
-
+> 📸 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/group-target.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/group-target.png" width="300"/>
+</a>
 ---
-
 ### ✅ Phase 6 — Campaign Setup
 
 Created the phishing campaign connecting all configured components.
 
 | Field | Value |
 |---|---|
-| Campaign Name | Lab-Phishing-Campaign-04 |
+| Campaign Name | Lab-Phishing-Campaign-01 |
 | Email Template | Google-Security-Alert |
 | Landing Page | Google-Login-Page |
 | URL | http://127.0.0.1:8080 |
@@ -137,17 +135,19 @@ Used `http://127.0.0.1:8080` because GoPhish is running locally inside a Kali Li
 The phishing page is only accessible within the lab environment.
 
 > **For real authorized engagements:**  
-> The URL should be the IP address or domain of the server running GoPhish — accessible by employees on the internal network (e.g., `http://192.168.1.50`) or a cloud-hosted server for external simulations (e.g., a registered domain on AWS or DigitalOcean).
+> The URL should be the IP address or domain of the server running GoPhish — accessible by employees on the internal network (e.g., `http://192.168.1.50`) or a cloud-hosted server for external simulations.
 
-> 📸 *[Screenshot: Campaign setup form in GoPhish]*
-
----
-
+📸<a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/launch-campaing.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/launch-campaing.png" width="300"/>
+</a> 
 ### ✅ Phase 7 — Campaign Launch
 
 Launched the campaign. The phishing email was delivered to the target inbox successfully.
 
-> 📸 *[Screenshot: Campaign launched — email delivered]*
+> 📸 E-mail received.
+> <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/email-received_gm-ph.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/email-received_gm-ph.png" width="300"/>
+</a>
 
 ---
 
@@ -157,29 +157,27 @@ Launched the campaign. The phishing email was delivered to the target inbox succ
 
 **Root Cause:** GoPhish's phishing server was configured to listen on **port 80**, which requires root-level privileges on Linux. The server was failing to bind to that port silently.
 
-**Solution:** Edited the GoPhish configuration file to change the phishing server port from `80` to `8080`:
+**How I found the fix:** The page was rendering raw HTML instead of the actual login page. I researched the issue and found that on Linux systems, ports below 1024 
+require root privileges to bind. Since GoPhish was not running with full root permissions on the phishing server process, port 80 was silently failing. 
+The solution was to move the phishing server to port **8080**, which does not require elevated privileges.
 
-```bash
-nano ~/gophish/config.json
-```
-
-Changed:
-```json
-"listen_url": "0.0.0.0:80"
-```
-To:
-```json
-"listen_url": "0.0.0.0:8080"
-```
+**Solution:** Edited the GoPhish configuration file.
 
 Restarted GoPhish and updated the campaign URL to `http://127.0.0.1:8080`.  
 The page rendered correctly after the fix.
 
-> 📸 *[Screenshot: config.json edited in nano]*  
-> 📸 *[Screenshot: Page rendering correctly after fix]*
+📸 **Before** — Raw HTML displayed instead of the page:
 
+<a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/page_error-wrong-port.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/page_error-wrong-port.png" width="300"/>
+</a>
+
+📸 **After** — Page rendering correctly after changing port to 8080:
+
+<a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/landing-page-working-100%25.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/landing-page-working-100%25.png" width="300"/>
+</a>
 ---
-
 ### ✅ Phase 9 — Results Analysis
 
 After clicking the link and submitting credentials on the fake login page, GoPhish captured the interaction and displayed the full results dashboard.
@@ -196,7 +194,9 @@ After clicking the link and submitting credentials on the fake login page, GoPhi
 The target clicked the link and submitted credentials — 100% of the simulated employees were successfully phished.  
 The submitted email and password were captured in the GoPhish database.
 
-> 📸 *[Screenshot: GoPhish results dashboard showing all metrics]*
+> 📸 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/results-campaign-phising.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/results-campaign-phising.png" width="300"/>
+</a>
 
 ---
 
@@ -233,6 +233,23 @@ Following a real phishing simulation, the next step is to launch a **security aw
 
 ---
 
+## 🤖 AI-Assisted Learning
+
+This project was built with the support of **Claude AI (Anthropic)** as a learning assistant.
+
+AI was used to:
+- Guide the step-by-step configuration of GoPhish
+- Help troubleshoot technical issues during the lab
+- Assist with HTML/CSS for the email template and landing page
+- Review and improve documentation structure
+
+> All hands-on work, decisions, and troubleshooting were performed directly by me 
+> inside the lab environment. AI served as a mentor  not as a replacement for 
+> practical execution.
+
+*"Using AI to accelerate learning is a skill in itself  just like a SOC Analyst 
+uses tools to work smarter."*
+
 ## 🔗 Related Projects
 
 | Project | Description |
@@ -243,15 +260,6 @@ Following a real phishing simulation, the next step is to launch a **security aw
 
 ---
 
-## 🗺️ Certification Roadmap
 
-| Certification | Status |
-|---|---|
-| TryHackMe SOC Level 1 | 🔄 In Progress |
-| CompTIA Security+ | 🔄 Studying |
-| BTL1 — Blue Team Level 1 | 🔜 Planned |
-| Splunk Core Certified User | 🔄 In Progress |
-
----
 
 <p align="center">Made with 🛡️ by <a href="https://github.com/frankllin-sec">Frankllin</a></p>
