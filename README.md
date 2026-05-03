@@ -40,23 +40,6 @@ The simulation covers:
 
 Installed GoPhish inside a Kali Linux VM running on VirtualBox.
 
-```bash
-# Navigate to home directory
-cd ~
-
-# Download GoPhish
-wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip
-
-# Extract
-unzip gophish-v0.12.1-linux-64bit.zip -d gophish
-
-# Enter directory and set permissions
-cd gophish
-chmod +x gophish
-
-# Run GoPhish
-sudo ./gophish
-```
 
 Once running, the admin panel is accessible at:
 ```
