@@ -67,8 +67,8 @@ A dedicated **App Password** was generated from Google Account settings — this
 | Password | [App Password - 16 chars] |
 | Ignore Certificate Errors | ✅ Enabled |
 
-> 📸 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Sending%20Profile.png">
-  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Sending%20Profile.png" width="300"/>
+> 📸 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Sending%20Profile1.png">
+  <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/Sending%20Profile1.png" width="300"/>
 </a>
 
 ---
