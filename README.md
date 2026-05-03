@@ -177,6 +177,7 @@ The page rendered correctly after the fix.
 <a href="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/landing-page-working-100%25.png">
   <img src="https://raw.githubusercontent.com/frankllin-sec/phishing-simulation-lab/main/landing-page-working-100%25.png" width="300"/>
 </a>
+
 ---
 ### ✅ Phase 9 — Results Analysis
 
